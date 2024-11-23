@@ -19,3 +19,7 @@ def record_engine_temperature():
 @app.route('/collect', methods=['POST'])
 def collect_engine_temperature():
     return {"success": True}, 200
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
+
