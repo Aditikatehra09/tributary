@@ -41,16 +41,4 @@ def record_engine_temperature():
 def collect_engine_temperature():
     return {"success": True}, 200
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000)
-
-#-------------------------------------------------------------------------------
-
-import json
-import redis as redis
-from flask import Flask, request
-from loguru import logger
-
-HISTORY_LENGTH = 10
-DATA_KEY = "engine_temperature"
 
